@@ -1,0 +1,26 @@
+Blur:
+    1. Lens
+    2. Gaussian
+    3. Motion
+Color:
+    4. Diffuse
+    5. Quantize
+    6. Shifting
+    7. Color Saturation
+    8. Image Saturation
+Compress:
+    9. JPEG
+    10. JP2K
+Noise:
+    11. Gaussian
+    12. Local variation
+    13. Poison
+    14. Salt
+    15. Pepper
+    16. Salt & Pepper
+    17. Speckle
+    18. Denoise
+Enhancement:
+    19. Darken
+    20. Brighten
+    21. Shifting (by truncate)
