@@ -6,7 +6,10 @@ There are 3 types of form can be used. To generate data, go to __src folder__ an
 > python hoadon_gen.py
 
 The results should be saved in __/data/results__ folder with following structure file name:
-> <type_of_distort> _ index _ <type_of_algorithm>.png
+> <form_index> _ <content_index> _ <type_of_distort> _ <type_of_algorithm>.png
+>
+> __EX:__  form_2_1_noise_local.png
+
 ## II. Implement
 There are 3 ways to implement:
 ### 1. Vocabulary of contents
