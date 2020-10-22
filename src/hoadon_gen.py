@@ -220,16 +220,16 @@ def draw_form_3(hospital_location, patient_id, patient_name, patient_age,
     return img
 
 
-def distort(img, inx):
+def distort(img, inx, form):
     img = np.array(img)
     img = cv2.cvtColor(img, cv2.COLOR_RGB2BGR)
     
     # Distorts - 11 types
     inx = str(inx)
-    blur(img, inx)
-    compress(img, inx)
-    color(img, inx)
-    noise(img, inx)
+    blur(img, inx, form)
+    compress(img, inx, form)
+    color(img, inx, form)
+    noise(img, inx, form)
 
 
 def main():
@@ -257,17 +257,17 @@ def main():
         img_1 = draw_form_1(hospital_location, patient_id, patient_name, patient_age,
                         patient_gender, patient_location, patient_phone,
                         patient_health, patient_drug, patient_date, doctor_name)
-        distort(img_1, inx)
+        distort(img_1, inx, 'form_1')
         
         img_2 = draw_form_2(hospital_location, patient_name, patient_age,
                         patient_gender, patient_location,
                         patient_health, patient_drug, patient_date, doctor_name)
-        distort(img_2, inx)
+        distort(img_2, inx, 'form_2')
 
         img_3 = draw_form_3(hospital_location, patient_id, patient_name, patient_age,
                         patient_gender, patient_location, patient_phone,
                         patient_health, patient_drug, patient_date, doctor_name)
-        distort(img_3, inx)
+        distort(img_3, inx, 'form_3')
         print('Generated with %d content(s) in %.2f s' % (inx + 1, time.time() - tic))
 
 
